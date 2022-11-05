@@ -2,7 +2,7 @@
 var seconds = 00;
 var tens = 00;
 var OutputSeconds = document.getElementById('second');
-var OutPutTens = document.getElementById('tens');
+var OutputTens = document.getElementById('tens');
 var buttonStart = document.getElementById('btn-start');
 var buttonStop = document.getElementById('btn-stop');
 var buttonReset = document.getElementById('btn-reset');
@@ -31,16 +31,16 @@ buttonReset.addEventListener('click', () => {
  function startTime(){
     tens++; //gazrdis erti ateulit
     if(tens <= 9){
-        OutPutTens.innerHTML = "0" + tens;
+        OutputTens.innerHTML = "0" + tens;
     } 
     if (tens > 9){
-        OutPutTens.innerHTML = tens;
+        OutputTens.innerHTML = tens;
     }
     if (tens > 99) {
         seconds++;
         OutputSeconds.innerHTML = "0" + seconds;
         tens = 0;
-        OutPutTens.innerHTML = "0" + tens;
+        OutputTens.innerHTML = "0" + tens;
     }
     if(seconds > 9) {
         OutputSeconds.innerHTML = seconds;
